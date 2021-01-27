@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-import { List } from './components/List/List'
+import { List } from './components/List/List';
 
 import logo from './logo.svg';
 import './App.css';
 
 interface AppProps {}
 
-function App({}: AppProps) {
+function Counter() {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -15,17 +15,22 @@ function App({}: AppProps) {
     const timer = setTimeout(() => setCount(count + 1), 1000);
     return () => clearTimeout(timer);
   }, [count, setCount]);
+
+  return <code>{count}</code>;
+}
+
+function App({}: AppProps) {
   // Return the App component.
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <List/>
+        <List />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <p>
-          Page has been open for <code>{count}</code> seconds.
+          Page has been open for <Counter /> seconds.
         </p>
         <p>
           <a

@@ -1,21 +1,20 @@
-import React from 'react'
-import { dynamicRow } from '../DynamicRow/DynamicRow' 
+import React from 'react';
+import { DynamicRow } from '../DynamicRow/DynamicRow';
 
 const listColumns = [
-    { field: 'id', type: 'string'}, { field: 'name', type: 'string' }
-]
+  { field: 'id', type: 'string' },
+  { field: 'name', type: 'string' },
+];
 const listData = [
-    { id: '3242', name: 'Vasil1'},
-    { id: '3243', name: 'Vasil2'},
-    { id: '3244', name: 'Vasil3'},
-    { id: '3245', name: 'Vasil4'}
-]
+  ['3242', 'Vasil1'],
+  ['3243', 'Vasil2'],
+  ['3244', 'Vasil3'],
+  ['3245', 'Vasil4'],
+];
 export const List = () => {
-    const Row = dynamicRow({ rowColumns: listColumns })
+  const Row = DynamicRow({ rowColumns: listColumns });
 
-    const rows = listData.map((row: any) => <Row key={row.id} id={row.id} name={row.name} />)
+  const rows = listData.map((row: any) => <Row key={row.id} values={row} />);
 
-    return <ul>
-        {rows}
-    </ul>
-} 
+  return <ul>{rows}</ul>;
+};
