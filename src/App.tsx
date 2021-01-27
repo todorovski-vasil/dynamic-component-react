@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+import { List } from './components/List/List'
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,6 +20,7 @@ function App({}: AppProps) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <List/>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
