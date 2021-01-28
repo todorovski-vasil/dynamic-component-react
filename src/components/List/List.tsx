@@ -6,11 +6,12 @@ const listColumns = [
   { field: 'name', type: 'string' },
 ];
 const listData = [
-  ['3242', 'Vasil1'],
-  ['3243', 'Vasil2'],
-  ['3244', 'Vasil3'],
-  ['3245', 'Vasil4'],
+  { id: '3242', name: 'Vasil1' },
+  { id: '3243', name: 'Vasil2' },
+  { id: '3247', name: 'Vasil3' },
+  { id: '3245', name: 'Vasil4' },
 ];
+
 export const List = () => {
   const Row = DynamicRow({ rowColumns: listColumns });
 
