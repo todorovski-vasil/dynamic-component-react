@@ -18,6 +18,7 @@ const DynamicField = ({ field, type }: { field: string; type: string }) => (
   ) : (
     <span>
       {field}={value}
+      {'; '}
     </span>
   );
 

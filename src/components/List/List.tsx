@@ -2,7 +2,7 @@ import React from 'react';
 import { DynamicRow } from '../DynamicRow/DynamicRow';
 
 const listColumns = [
-  { field: 'id', type: 'string' },
+  { field: 'id', type: 'id' },
   { field: 'name', type: 'string' },
 ];
 const listData = [
